@@ -18,6 +18,7 @@ namespace VCSAutoMokymai
             IWebDriver driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             driver.Url = "https://demoqa.com/text-box";
+
             IWebElement popup = driver.FindElement(By.Id("close-fixedban"));
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.Until(d => popup.Displayed);
