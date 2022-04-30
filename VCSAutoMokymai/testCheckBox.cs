@@ -32,6 +32,9 @@ namespace VCSAutoMokymai
         [Test]
         public static void ClickOnCheckBoxes()
         {
+            // paspaude + zenkliuka, kad isskleisti visus mygtukus
+            // inspect ir susirandame butinai button, kur jo css
+            // "#tree-node > div > button.rct-option.rct-option-expand-all"
             IWebElement expandAllButton = driver.FindElement(By.CssSelector("#tree-node > div > button.rct-option.rct-option-expand-all"));
             expandAllButton.Click();
 
@@ -47,6 +50,7 @@ namespace VCSAutoMokymai
                 checkBoxes.ElementAt(i).Click();
             }
             */
+
         }
     }
 }

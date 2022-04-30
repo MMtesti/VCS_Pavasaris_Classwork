@@ -57,8 +57,10 @@
     <Compile Include="HomeWork1Calculator.cs" />
     <Compile Include="HomeWork1Optimization.cs" />
     <Compile Include="HomeWork2.cs" />
+    <Compile Include="HomeWork2Optional.cs" />
     <Compile Include="Page\DemoqaTestBoxPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestCaseBrowser.cs" />
     <Compile Include="testCheckBox.cs" />
     <Compile Include="testWebDriver.cs" />
     <Compile Include="Test\DemoqaTestBoxTest.cs" />
