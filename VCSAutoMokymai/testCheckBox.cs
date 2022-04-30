@@ -13,7 +13,6 @@ namespace VCSAutoMokymai
 {
     class testCheckBox
     {
-
         private static IWebDriver driver;
 
         [OneTimeSetUp]
@@ -23,6 +22,7 @@ namespace VCSAutoMokymai
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             driver.Manage().Window.Maximize();
             driver.Url = "https://demoqa.com/checkbox";
+
             IWebElement popup = driver.FindElement(By.Id("close-fixedban"));
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.Until(d => popup.Displayed);
@@ -41,13 +41,12 @@ namespace VCSAutoMokymai
             {
                 checkBox.Click();
             }
-
+            /*
             for (int i = 0; i < checkBoxes.Count; i++)
             {
                 checkBoxes.ElementAt(i).Click();
             }
+            */
         }
-
-
     }
 }

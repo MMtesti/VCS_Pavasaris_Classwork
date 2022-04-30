@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
@@ -27,14 +28,15 @@ namespace VCSAutoMokymai
             IWebElement fullNameInput = driver.FindElement(By.Id("userName"));
             string fullName = "Milda M";
             fullNameInput.SendKeys(fullName);
-           
 
-            IWebElement submitButton = driver.FindElement(By.Id("submit"));
+            IWebElement submitButton = driver.FindElement(By.CssSelector("#submit"));
             submitButton.Click();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+
             IWebElement nameResult = driver.FindElement(By.Id("name"));
-            Assert.AreEqual($"Name:{fullName}", nameResult.Text, "Name is wrong");
+            Assert.AreEqual($"Name:{fullName}", nameResult.Text, "Name is wrong!");
+
             driver.Quit();
+
         }
     }
 }
