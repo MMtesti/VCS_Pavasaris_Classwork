@@ -15,7 +15,7 @@ namespace VCSAutoMokymai.Page
         private static IWebDriver _driver;
 
         private static IWebElement _fullNameInput => _driver.FindElement(By.Id("userName"));
-        private static IWebElement _submitButton => _driver.FindElement(By.Id("submit"));
+        private static IWebElement _submitButton => _driver.FindElement(By.CssSelector("#submit"));
         private static IWebElement _nameResult => _driver.FindElement(By.Id("name"));
         private static IWebElement _popup => _driver.FindElement(By.Id("close-fixedban"));
         public DemoqaTestBoxPage(IWebDriver webDriver)

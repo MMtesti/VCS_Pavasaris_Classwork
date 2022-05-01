@@ -13,7 +13,8 @@ namespace VCSAutoMokymai.Test
     class DemoqaTestBoxTest
     {
         private static IWebDriver _driver;
-        private static void OneTimeSetup()
+        [OneTimeSetUp]
+        public static void OneTimeSetup()
         {
             _driver = new ChromeDriver();
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
@@ -25,7 +26,7 @@ namespace VCSAutoMokymai.Test
             _driver.Quit();
         }
         [Test]
-        public  static void TestFullNAmeInputField()
+        public  static void TestFullNameInputField()
         {
             string fullName = "Milda";
             DemoqaTestBoxPage demoqaTestBoxPage = new DemoqaTestBoxPage(_driver);
