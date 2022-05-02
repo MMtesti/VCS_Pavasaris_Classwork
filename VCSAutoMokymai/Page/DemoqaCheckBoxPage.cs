@@ -32,11 +32,17 @@ namespace VCSAutoMokymai.Page
             wait.Until(d => _popup.Displayed);
             _popup.Click();
         }
-        /*public void ClickOnCommands()
-            //foreach (IWebElement checkBox in _checkBoxes)
+   
+      public void ClickOnCommands()
+        {
+            foreach (IWebElement checkBox in _checkBoxes)
             {
-                checkBox[3].Click();
+                _checkBoxes[3].Click();
             }
-        */
+        }
+
+                
+            
+      
     }
 }
