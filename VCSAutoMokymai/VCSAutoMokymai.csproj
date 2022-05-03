@@ -56,6 +56,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaigiamasisDarbas\Page\BasePage.cs" />
+    <Compile Include="BaigiamasisDarbas\Page\ERutaPage.cs" />
+    <Compile Include="BaigiamasisDarbas\Test\BaseTest.cs" />
+    <Compile Include="BaigiamasisDarbas\Test\ERutaTest.cs" />
     <Compile Include="DemoQATestBoxTest.cs" />
     <Compile Include="FirstTest.cs" />
     <Compile Include="HomeWork1Calculator.cs" />
@@ -81,6 +85,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

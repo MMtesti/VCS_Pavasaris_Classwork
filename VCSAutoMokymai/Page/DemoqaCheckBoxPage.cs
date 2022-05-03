@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 namespace VCSAutoMokymai.Page
 {
-    class DemoqaCheckBoxPage :BasePage
+    class DemoqaCheckBoxPage : BasePage
         
 
     {
