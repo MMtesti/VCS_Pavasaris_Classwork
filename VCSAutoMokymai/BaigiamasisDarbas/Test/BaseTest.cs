@@ -15,9 +15,9 @@ namespace VCSAutoMokymai.BaigiamasisDarbas.Test
         protected static IWebDriver Driver;
 
         public static ERutaPage _eRutaPage;
-       // public static DemoqaCheckBoxPage _demoqaCheckBoxPage;
-       // public static DemoqaSelectPage _demoqaSelectPage;
-       
+        public static ERutaSearchPage _eRutaSearchPage;
+        // public static DemoqaSelectPage _demoqaSelectPage;
+
 
 
         [OneTimeSetUp]
@@ -28,9 +28,10 @@ namespace VCSAutoMokymai.BaigiamasisDarbas.Test
             Driver.Manage().Window.Maximize();
 
             _eRutaPage = new ERutaPage(Driver);
+            _eRutaSearchPage = new ERutaSearchPage(Driver);
           //  _demoqaCheckBoxPage = new DemoqaCheckBoxPage(Driver);
-          //  _demoqaSelectPage = new DemoqaSelectPage(Driver);
-         
+          
+
         }
 
         [OneTimeTearDown]
