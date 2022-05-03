@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using System.Collections.Generic;
 
 namespace VCSAutoMokymai.BaigiamasisDarbas.Page
 {
@@ -14,7 +15,7 @@ namespace VCSAutoMokymai.BaigiamasisDarbas.Page
 
         private IWebElement _searchActualResult => Driver.FindElement(By.CssSelector("#middle_blocks > li > h2 > span:nth-child(1)"));
 
-       
+        private IReadOnlyCollection<IWebElement> searchResults = Driver.FindElements(By.ClassName("item-info-container"));
 
         public ERutaSearchPage(IWebDriver webDriver) : base(webDriver) { }
 
