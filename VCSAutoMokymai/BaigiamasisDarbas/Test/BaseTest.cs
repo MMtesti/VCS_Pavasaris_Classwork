@@ -27,8 +27,8 @@ namespace VCSAutoMokymai.BaigiamasisDarbas.Test
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             Driver.Manage().Window.Maximize();
 
-            _eRutaPage = new ERutaPage(Driver);
-            _eRutaSearchPage = new ERutaSearchPage(Driver);
+           _eRutaPage = new ERutaPage(Driver);
+           _eRutaSearchPage = new ERutaSearchPage(Driver);
           //  _demoqaCheckBoxPage = new DemoqaCheckBoxPage(Driver);
           
 
@@ -37,7 +37,7 @@ namespace VCSAutoMokymai.BaigiamasisDarbas.Test
         [OneTimeTearDown]
         public static void OneTimeTearDown()
         {
-           Driver.Quit();
+          Driver.Quit();
         }
     }
 }

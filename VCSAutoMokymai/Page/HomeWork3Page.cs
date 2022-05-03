@@ -1,10 +1,5 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VCSAutoMokymai.Page
 {
@@ -14,7 +9,7 @@ namespace VCSAutoMokymai.Page
 
         private IWebElement _expandAllButton => Driver.FindElement(By.CssSelector("#tree-node > div > button.rct-option.rct-option-expand-all"));
         private IWebElement _expandCommands => Driver.FindElement(By.CssSelector("#tree-node > ol > li > ol > li:nth-child(1) > ol > li:nth-child(2) > span > label > span.rct-checkbox > svg > path"));
-        private  IWebElement _popup => Driver.FindElement(By.Id("close-fixedban"));
+        private static  IWebElement _popup => Driver.FindElement(By.Id("close-fixedban"));
         private static IWebElement _nameResult => Driver.FindElement(By.Id("name"));
 
         public HomeWork3Page(IWebDriver webDriver) : base(webDriver) { }

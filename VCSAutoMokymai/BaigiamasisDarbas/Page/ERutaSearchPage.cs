@@ -1,9 +1,5 @@
-﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 
 namespace VCSAutoMokymai.BaigiamasisDarbas.Page
 {
@@ -12,11 +8,15 @@ namespace VCSAutoMokymai.BaigiamasisDarbas.Page
         private const string PageAddress = "https://www.e-ruta.lt/paieska";
 
         
-        private static IWebElement _searchInput = Driver.FindElement(By.Id("main-search-input"));
+        private IWebElement _searchInput => Driver.FindElement(By.CssSelector("#main-search-input")); // CssSelector "#main-search-input" ar Id("main-search-input")
 
-        private static IWebElement _searchSubmitButton = Driver.FindElement(By.Id("main-search-submit"));
+        private IWebElement _searchSubmitButton => Driver.FindElement(By.Id("main-search-submit"));
 
-        public ERutaSearchPage(IWebDriver webdriver) : base(webdriver) { }
+        private IWebElement _searchActualResult => Driver.FindElement(By.CssSelector("#middle_blocks > li > h2 > span:nth-child(1)"));
+
+       
+
+        public ERutaSearchPage(IWebDriver webDriver) : base(webDriver) { }
 
         public void NavigateToDefaultPage()
         {
@@ -29,6 +29,10 @@ namespace VCSAutoMokymai.BaigiamasisDarbas.Page
         public void ClickSearchSubmitButton()
         {
             _searchSubmitButton.Click();
+        }
+        public void VerifySearchResult(string expectedResult)
+        {
+            Assert.AreEqual(expectedResult, _searchActualResult.Text, "Name is wrong!");
         }
     }
 }
