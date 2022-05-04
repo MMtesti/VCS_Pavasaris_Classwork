@@ -17,16 +17,15 @@ namespace VCSAutoMokymai.Tools
     {
         public static void TakeScreenshot(IWebDriver webDriver)
         {
-            Console.WriteLine(Assembly.GetExecutingAssembly().Location);
-
-            //  string a = Assembly.GetExecutingAssembly().Location.ToString();
             Screenshot screenshot = webDriver.TakeScreenshot();
 
             string screenshotDirectory = Path.GetDirectoryName(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
             string screenshotFolder = Path.Combine(screenshotDirectory, "screenshot");
             Directory.CreateDirectory(screenshotFolder);
+
             string screenshotName = $"{TestContext.CurrentContext.Test.Name}_{DateTime.Now:HH_mm_ss}.png";
             string screenshotPath = Path.Combine(screenshotFolder, screenshotName);
+
             screenshot.SaveAsFile(screenshotPath, ScreenshotImageFormat.Png);
         }
         
