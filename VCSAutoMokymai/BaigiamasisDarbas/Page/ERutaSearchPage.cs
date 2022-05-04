@@ -14,6 +14,7 @@ namespace VCSAutoMokymai.BaigiamasisDarbas.Page
         private IWebElement _searchSubmitButton => Driver.FindElement(By.Id("main-search-submit"));
 
         private IWebElement _searchActualResult => Driver.FindElement(By.CssSelector("#middle_blocks > li > h2 > span:nth-child(1)"));
+        private IReadOnlyCollection<IWebElement> AddToCartButton => Driver.FindElements(By.ClassName("addToCart-container"));
 
         private IReadOnlyCollection<IWebElement> searchResults = Driver.FindElements(By.ClassName("item-info-container"));
 

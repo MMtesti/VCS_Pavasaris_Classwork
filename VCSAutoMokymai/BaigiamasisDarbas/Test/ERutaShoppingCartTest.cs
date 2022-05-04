@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,5 +10,8 @@ namespace VCSAutoMokymai.BaigiamasisDarbas.Test
 {
     class ERutaShoppingCartTest :BaseTest
     {
+        [Test]
+        //public static void Check()
+        
     }
 }

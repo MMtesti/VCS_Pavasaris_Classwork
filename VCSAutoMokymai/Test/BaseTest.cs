@@ -40,7 +40,7 @@ namespace VCSAutoMokymai.Test
         {
             if(TestContext.CurrentContext.Result.Outcome != ResultState.Success)
             {
-                MakeScreenshot.takeScreenshot(Driver);
+                MakeScreenshot.TakeScreenshot(Driver);
             }
         }
     }

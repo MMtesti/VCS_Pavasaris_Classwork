@@ -16,6 +16,8 @@ namespace VCSAutoMokymai.Test
         [Test]
         public static void FailingTest()
         {
+            _demoqaCheckBoxPage.NavigateToDefaultPage();
+            _demoqaCheckBoxPage.ClosePopUp();
             Assert.IsTrue(false);
         }
 
