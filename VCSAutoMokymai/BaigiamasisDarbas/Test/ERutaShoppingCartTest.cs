@@ -10,7 +10,7 @@ namespace VCSAutoMokymai.BaigiamasisDarbas.Test
 {
     class ERutaShoppingCartTest :BaseTest
     {
-        [Test]
+        //[Test]
         //public static void Check()
         
     }

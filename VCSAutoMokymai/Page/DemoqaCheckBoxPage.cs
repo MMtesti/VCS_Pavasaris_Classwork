@@ -1,4 +1,7 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
+using System.Collections.Generic;
+
 namespace VCSAutoMokymai.Page
 {
     class DemoqaCheckBoxPage : BasePage
@@ -10,6 +13,9 @@ namespace VCSAutoMokymai.Page
         private IWebElement _expandAllButton => Driver.FindElement(By.CssSelector("#tree-node > div > button.rct-option.rct-option-expand-all"));
 
         private static IWebElement _popup => Driver.FindElement(By.Id("close-fixedban"));
+        private IReadOnlyCollection<IWebElement> _checkBoxes => Driver.FindElements(By.ClassName("rct-text"));
+
+        private IWebElement _actualResult => Driver.FindElement(By.Id("result"));
 
         public DemoqaCheckBoxPage(IWebDriver webDriver) : base(webDriver) { }
 
@@ -27,6 +33,29 @@ namespace VCSAutoMokymai.Page
         public void ClickExpandAllButton()
         {
             _expandAllButton.Click();
+        }
+        public void ClickOnTwoCheckBoxes(string firstChoice, string secondChoice)
+        {
+            foreach (IWebElement checkBox in _checkBoxes)
+            {
+                IWebElement checkBoxElement = checkBox.FindElement(By.ClassName("rct-checkbox"));
+
+                if (checkBox.Text.Equals(firstChoice))
+                {
+                    checkBoxElement.Click();
+                }
+                if (checkBox.Text.Equals(secondChoice))
+                {
+                    checkBoxElement.Click();
+                }
+            }
+        }
+
+        public void VerifyResults(string expectedResult)
+        {
+            string testResult = _actualResult.Text;
+
+            Assert.IsTrue(_actualResult.Text.Contains(expectedResult), "Result is Incorrect");
         }
     }
 }

@@ -13,10 +13,10 @@ namespace VCSAutoMokymai.BaigiamasisDarbas.Page
 
         private IWebElement _searchSubmitButton => Driver.FindElement(By.Id("main-search-submit"));
 
-        private IWebElement _searchActualResult => Driver.FindElement(By.CssSelector("#middle_blocks > li > h2 > span:nth-child(1)"));
-        private IReadOnlyCollection<IWebElement> AddToCartButton => Driver.FindElements(By.ClassName("addToCart-container"));
+        private IWebElement _searchActualResult => Driver.FindElement(By.CssSelector("#middle_blocks > li > h2 > span:nth-child(1)")); // Ieskojote: atsakymas
+        private IReadOnlyCollection<IWebElement> _addToCartButton => Driver.FindElements(By.ClassName("addToCart-container"));
 
-        private IReadOnlyCollection<IWebElement> searchResults = Driver.FindElements(By.ClassName("item-info-container"));
+        private IReadOnlyCollection<IWebElement> _searchResults = Driver.FindElements(By.ClassName("item-info-container"));
 
         public ERutaSearchPage(IWebDriver webDriver) : base(webDriver) { }
 
@@ -36,5 +36,18 @@ namespace VCSAutoMokymai.BaigiamasisDarbas.Page
         {
             Assert.AreEqual(expectedResult, _searchActualResult.Text, "Name is wrong!");
         }
+
+        
+        /*
+         * public void VerifySearchActualResults(string expectedResult)
+        {
+            IList<IWebElement> _searchResults = _searchResults
+
+            foreach (IWebElement item in )
+            {
+                Assert.IsTrue(expectedResult.Contains(item.Text), "Serched wrong goods");
+            }
+        }
+        */
     }
 }
