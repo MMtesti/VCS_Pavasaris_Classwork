@@ -65,6 +65,8 @@
     <Compile Include="BaigiamasisDarbas\Test\ERutaShoppingCartTest.cs" />
     <Compile Include="BaigiamasisDarbas\Test\ERutaTest.cs" />
     <Compile Include="DemoQATestBoxTest.cs" />
+    <Compile Include="Drivers\Browsers.cs" />
+    <Compile Include="Drivers\CustomDriver.cs" />
     <Compile Include="FirstTest.cs" />
     <Compile Include="HomeWork1Calculator.cs" />
     <Compile Include="HomeWork1Optimization.cs" />
@@ -84,6 +86,7 @@
     <Compile Include="Test\DemoqaSelectTest.cs" />
     <Compile Include="Test\DemoqaTestBoxTest.cs" />
     <Compile Include="Test\HomeWork3Test.cs" />
+    <Compile Include="Tools\MakeScreenshot.cs" />
     <Compile Include="uzduotis1.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,8 +1,11 @@
 ﻿using NUnit.Framework;
+using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
+using VCSAutoMokymai.Drivers;
 using VCSAutoMokymai.Page;
+
 
 namespace VCSAutoMokymai.Test
 {
@@ -19,9 +22,7 @@ namespace VCSAutoMokymai.Test
         [OneTimeSetUp]
         public static void OneTimeSetUp()
         {
-            Driver = new ChromeDriver();
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            Driver.Manage().Window.Maximize();
+            Driver = CustomDriver.GetChromeDriver();
 
             _demoqaTestBoxPage = new DemoqaTestBoxPage(Driver);
             _demoqaCheckBoxPage = new DemoqaCheckBoxPage(Driver);
@@ -33,6 +34,14 @@ namespace VCSAutoMokymai.Test
         public static void OneTimeTearDown()
         {
            Driver.Quit();
+        }
+        [TearDown]
+        public static void TearDown()
+        {
+            if(TestContext.CurrentContext.Result.Outcome != ResultState.Success)
+            {
+                // make screenshot
+            }
         }
     }
 }
