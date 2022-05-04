@@ -5,7 +5,7 @@ using OpenQA.Selenium.Chrome;
 using System;
 using VCSAutoMokymai.Drivers;
 using VCSAutoMokymai.Page;
-
+using VCSAutoMokymai.Tools;
 
 namespace VCSAutoMokymai.Test
 {
@@ -40,7 +40,7 @@ namespace VCSAutoMokymai.Test
         {
             if(TestContext.CurrentContext.Result.Outcome != ResultState.Success)
             {
-                // make screenshot
+                MakeScreenshot.takeScreenshot(Driver);
             }
         }
     }

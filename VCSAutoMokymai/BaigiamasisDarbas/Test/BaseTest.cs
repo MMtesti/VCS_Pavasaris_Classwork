@@ -16,7 +16,7 @@ namespace VCSAutoMokymai.BaigiamasisDarbas.Test
 
         public static ERutaPage _eRutaPage;
         public static ERutaSearchPage _eRutaSearchPage;
-        public static ERutaShoppingCartPage _eRutaShoppingCartPage
+        public static ERutaShoppingCartPage _eRutaShoppingCartPage;
         // public static DemoqaSelectPage _demoqaSelectPage;
 
 
