@@ -59,8 +59,10 @@
     <Compile Include="BaigiamasisDarbas\Page\BasePage.cs" />
     <Compile Include="BaigiamasisDarbas\Page\ERutaPage.cs" />
     <Compile Include="BaigiamasisDarbas\Page\ERutaSearchPage.cs" />
+    <Compile Include="BaigiamasisDarbas\Page\ERutaShoppingCartPage.cs" />
     <Compile Include="BaigiamasisDarbas\Test\BaseTest.cs" />
     <Compile Include="BaigiamasisDarbas\Test\ERutaSearchTest.cs" />
+    <Compile Include="BaigiamasisDarbas\Test\ERutaShoppingCartTest.cs" />
     <Compile Include="BaigiamasisDarbas\Test\ERutaTest.cs" />
     <Compile Include="DemoQATestBoxTest.cs" />
     <Compile Include="FirstTest.cs" />
