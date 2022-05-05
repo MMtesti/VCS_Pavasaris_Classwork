@@ -11,13 +11,17 @@ namespace VCSAutoMokymai.Drivers
 {
     class CustomDriver
     {
-        public static IWebDriver GetChromeDriver()
+        public static IWebDriver GetIncognitoChrome()
         {
             return GetDriver(Browsers.Chrome);
         }
         public static IWebDriver GetFirefoxDriver()
         {
             return GetDriver(Browsers.Firefox);
+        }
+        public static IWebDriver GetIncognitoCrome()
+        {
+            return GetDriver(Browsers.IncognitoChrome);
         }
         private static IWebDriver GetDriver(Browsers browser)
         {
@@ -32,6 +36,9 @@ namespace VCSAutoMokymai.Drivers
                     webDriver = new FirefoxDriver();
                     break;
                 // galima cia surasyti likusius browsers
+                case Browsers.IncognitoChrome:
+                    webDriver = GetChromeWithIncognitoOption();
+                    break;
                 default:
                     webDriver = new ChromeDriver();
                     break;
@@ -40,6 +47,13 @@ namespace VCSAutoMokymai.Drivers
             webDriver.Manage().Window.Maximize();
 
             return webDriver;
+        }
+        private static IWebDriver GetChromeWithIncognitoOption()
+        {
+            ChromeOptions options = new ChromeOptions();
+            options.AddArguments("incognito");
+            options.AddArguments("headless", "incognito");
+            return new ChromeDriver(options);
         }
     }
 }

@@ -22,7 +22,7 @@ namespace VCSAutoMokymai.Test
         [OneTimeSetUp]
         public static void OneTimeSetUp()
         {
-            Driver = CustomDriver.GetChromeDriver();
+            Driver = CustomDriver.GetIncognitoChrome();
 
             _demoqaTestBoxPage = new DemoqaTestBoxPage(Driver);
             _demoqaCheckBoxPage = new DemoqaCheckBoxPage(Driver);
