@@ -16,7 +16,7 @@ namespace VCSAutoMokymai.Test
         public static DemoqaTestBoxPage _demoqaTestBoxPage;
         public static DemoqaCheckBoxPage _demoqaCheckBoxPage;
         public static DemoqaSelectPage _demoqaSelectPage;
-        public static HomeWork3Page _homeWork3Page;
+        
 
 
         [OneTimeSetUp]
@@ -27,7 +27,7 @@ namespace VCSAutoMokymai.Test
             _demoqaTestBoxPage = new DemoqaTestBoxPage(Driver);
             _demoqaCheckBoxPage = new DemoqaCheckBoxPage(Driver);
             _demoqaSelectPage = new DemoqaSelectPage(Driver);
-            _homeWork3Page = new HomeWork3Page(Driver);
+            
         }
 
         [OneTimeTearDown]

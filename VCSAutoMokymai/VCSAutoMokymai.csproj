@@ -76,7 +76,6 @@
     <Compile Include="Page\DemoqaCheckBoxPage.cs" />
     <Compile Include="Page\DemoqaSelectPage.cs" />
     <Compile Include="Page\DemoqaTestBoxPage.cs" />
-    <Compile Include="Page\HomeWork3Page.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestCaseBrowser.cs" />
     <Compile Include="testCheckBox.cs" />
@@ -85,7 +84,6 @@
     <Compile Include="Test\DemoqaCheckBoxTest.cs" />
     <Compile Include="Test\DemoqaSelectTest.cs" />
     <Compile Include="Test\DemoqaTestBoxTest.cs" />
-    <Compile Include="Test\HomeWork3Test.cs" />
     <Compile Include="Tools\MakeScreenshot.cs" />
     <Compile Include="uzduotis1.cs" />
   </ItemGroup>

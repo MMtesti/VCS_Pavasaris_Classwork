@@ -57,5 +57,6 @@ namespace VCSAutoMokymai.Page
 
             Assert.IsTrue(_actualResult.Text.Contains(expectedResult), "Result is Incorrect");
         }
+
     }
 }
