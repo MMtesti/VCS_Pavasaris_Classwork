@@ -35,10 +35,10 @@ namespace VCSAutoMokymai.Drivers
                 case Browsers.Firefox:
                     webDriver = new FirefoxDriver();
                     break;
-                // galima cia surasyti likusius browsers
                 case Browsers.IncognitoChrome:
                     webDriver = GetChromeWithIncognitoOption();
                     break;
+                // galima cia surasyti likusius browsers
                 default:
                     webDriver = new ChromeDriver();
                     break;

@@ -16,7 +16,10 @@ namespace VCSAutoMokymai.Test
         public static DemoqaTestBoxPage _demoqaTestBoxPage;
         public static DemoqaCheckBoxPage _demoqaCheckBoxPage;
         public static DemoqaSelectPage _demoqaSelectPage;
-        
+        public static SenukaiPage _senukaiPage;
+        public static AlertPage _alertPage;
+        public static SebCalcPage _sebCalcPage;
+
 
 
         [OneTimeSetUp]
@@ -24,10 +27,15 @@ namespace VCSAutoMokymai.Test
         {
             Driver = CustomDriver.GetIncognitoChrome();
 
+
             _demoqaTestBoxPage = new DemoqaTestBoxPage(Driver);
             _demoqaCheckBoxPage = new DemoqaCheckBoxPage(Driver);
             _demoqaSelectPage = new DemoqaSelectPage(Driver);
-            
+            _senukaiPage = new SenukaiPage(Driver);
+            _alertPage = new AlertPage(Driver);
+            _sebCalcPage = new SebCalcPage(Driver);
+
+
         }
 
         [OneTimeTearDown]
