@@ -11,7 +11,7 @@ namespace VCSAutoMokymai.Drivers
 {
     class CustomDriver
     {
-        public static IWebDriver GetIncognitoChrome()
+        public static IWebDriver GetChromeDriver()
         {
             return GetDriver(Browsers.Chrome);
         }
@@ -48,6 +48,8 @@ namespace VCSAutoMokymai.Drivers
 
             return webDriver;
         }
+
+
         private static IWebDriver GetChromeWithIncognitoOption()
         {
             ChromeOptions options = new ChromeOptions();
