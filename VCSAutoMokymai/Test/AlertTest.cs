@@ -19,7 +19,7 @@ namespace VCSAutoMokymai.Test
         [Test]
         public static void TestSecondAlert()
         {
-            // toks uzrasymo budas glaima Page objektuose yrasius vietoje void AlertPage ir return this
+            // toks uzrasymo budas galime Page objektuose irasius vietoje void AlertPage ir return this
             _alertPage.NavigateToDefaultPage()
                 .ClickSecondAlertButton()
                 .CancelSecondAlertButton()
