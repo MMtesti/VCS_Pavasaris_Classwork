@@ -41,7 +41,7 @@ namespace VCSAutoMokymai.BaigiamasisDarbas.Page
         /*
          * public void VerifySearchActualResults(string expectedResult)
         {
-            IList<IWebElement> _searchResults = _searchResults
+            Ip<IWebElement> _searchResults = _searchResults
 
             foreach (IWebElement item in )
             {
